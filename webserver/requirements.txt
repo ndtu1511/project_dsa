@@ -1,0 +1,4 @@
+redis
+python-multipart
+Pillow
+numpy

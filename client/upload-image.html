@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    
+</head>
+
+<body>
+    <h2>File Upload & Image Preview</h2>
+    <p class="lead">No Plugins <b>Just Javascript</b></p>
+
+    <!-- Upload  -->
+   <form id="file-upload-form" class="uploader"
+    enctype="multipart/form-data" action = "http://localhost/predict" method = "post">
+        <input id="file-upload" type="file" name="img_file" accept="image/*" />
+
+        <label for="file-upload" id="file-drag">
+            <img id="file-image" src="#" alt="Preview" class="hidden">
+            <div id="start">
+                <i class="fa fa-download" aria-hidden="true"></i>
+                <div>Select a file or drag here</div>
+                <div id="notimage" class="hidden">Please select an image</div>
+                <span id="file-upload-btn" class="btn btn-primary">Select a file</span>
+            </div>
+            <div id="response" class="hidden">
+                <div id="messages"></div>
+                <progress class="progress" id="file-progress" value="0">
+                    <span>0</span>%
+                </progress>
+            </div>
+        </label>
+        <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+    </form>
+</body>
+<script src="main.js"></script>
+
+</html>
